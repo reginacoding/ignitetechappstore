@@ -1,0 +1,87 @@
+/* project.css */
+
+.project-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.back-link {
+    text-decoration: none;
+    color: #0066cc;
+    margin-right: 15px;
+}
+
+.project-icon {
+    width: 100px;
+    height: 100px;
+    margin-right: 15px;
+}
+
+.project-header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+.subtitle {
+    color: #666;
+    margin: 5px 0;
+}
+
+.get-button {
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.project-meta {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.meta-item {
+    text-align: center;
+    font-size: 14px;
+}
+
+.meta-item strong {
+    display: block;
+    font-size: 18px;
+}
+
+.project-description, .project-preview, .project-information {
+    margin-bottom: 30px;
+}
+
+.preview-images {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.preview-images img {
+    max-width: 45%;
+    border-radius: 10px;
+}
+
+.play-video-button {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
