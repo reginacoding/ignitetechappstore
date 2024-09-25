@@ -18,7 +18,11 @@
     margin-right: 15px;
 }
 
-.project-header h1 {
+.project-title {
+    flex-grow: 1;
+}
+
+.project-title h1 {
     margin: 0;
     font-size: 32px;
 }
@@ -26,6 +30,16 @@
 .subtitle {
     color: #666;
     margin: 5px 0;
+}
+
+.project-links {
+    margin-top: 10px;
+}
+
+.project-link {
+    text-decoration: none;
+    color: #0066cc;
+    margin-right: 15px;
 }
 
 .get-button {
@@ -36,29 +50,9 @@
     border-radius: 20px;
     font-size: 16px;
     cursor: pointer;
-    margin-left: auto;
 }
 
-.project-meta {
-    display: flex;
-    justify-content: space-between;
-    background-color: #f0f0f0;
-    padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-.meta-item {
-    text-align: center;
-    font-size: 14px;
-}
-
-.meta-item strong {
-    display: block;
-    font-size: 18px;
-}
-
-.project-description, .project-preview, .project-information {
+.project-description, .project-preview, .project-details {
     margin-bottom: 30px;
 }
 
@@ -84,4 +78,17 @@
 h2 {
     font-size: 24px;
     margin-bottom: 15px;
+}
+
+.details-section {
+    margin-bottom: 20px;
+}
+
+.details-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.details-section ul {
+    padding-left: 20px;
 }
