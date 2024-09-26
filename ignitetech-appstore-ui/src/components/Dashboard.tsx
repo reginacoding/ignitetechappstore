@@ -97,13 +97,13 @@ const Dashboard: React.FC<DashboardProps> = ({ selectedDepartment, searchQuery, 
             
             {filteredProjects.length > 0 && (
                 <div className="grid grid-cols-2 gap-6">
-                    <div className="bg-gradient-to-br from-gray-100 to-gray-200 p-6 rounded-lg shadow">
+                    <div className="bg-gradient-to-r from-gray-50 to-gray-200 p-6 rounded-lg shadow">
                         <h3 className="text-sm font-medium text-gray-500 uppercase mb-2">Featured Project</h3>
                         <h2 className="text-xl font-semibold text-gray-800 mb-2">{filteredProjects[0].title}</h2>
                         <p className="text-sm text-gray-600">{filteredProjects[0].description}</p>
                     </div>
                     {filteredProjects.length > 1 && (
-                        <div className="bg-gradient-to-br from-gray-100 to-gray-200 p-6 rounded-lg shadow">
+                        <div className="bg-gradient-to-r from-gray-50 to-gray-200 p-6 rounded-lg shadow">
                             <h3 className="text-sm font-medium text-gray-500 uppercase mb-2">New Project</h3>
                             <h2 className="text-xl font-semibold text-gray-800 mb-2">{filteredProjects[1].title}</h2>
                             <p className="text-sm text-gray-600">{filteredProjects[1].description}</p>
