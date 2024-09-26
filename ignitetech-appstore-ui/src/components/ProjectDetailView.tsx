@@ -34,8 +34,10 @@ const ProjectDetailView: React.FC = () => {
             </div>
           </div>
           <div>
-            <Button variant="outline" className="mr-2 border-gray-500">Source</Button>
-            <Button variant="secondary" className="bg-gray-500 text-white hover:bg-gray-400">View</Button>
+          <div>
+            <Button variant="outline" className="mr-2 border-gray-500 px-3" onClick={() => window.open(project.source, '_blank')}>Source</Button>
+            <Button variant="secondary" className="bg-gray-500 text-white hover:bg-gray-400 px-3 " onClick={() => window.open(project.view, '_blank')}>View</Button>
+          </div>
           </div>
         </div>
       </header>

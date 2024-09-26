@@ -18,7 +18,10 @@
       },
       "useCase": "Fyx can be used to draft blog posts, social media content, and email campaigns, saving marketers hours of work.",
       "contributors": ["Sarah Johnson", "Mike Lee", "Emily Chen"],
-      "video": "/videos/fyx-demo.mp4"
+      "video": "/videos/fyx-demo.mp4",
+      "source": "https://github.com/ignitetech/fyx",
+      "view": "https://fyx.ignitetech.com",
+      "podcast": "https://podcasts.ignitetech.com/fyx-introduction"
     },
     {
       "type": "bizops",
@@ -38,7 +41,10 @@
       },
       "useCase": "This tool can predict sales trends, optimize inventory management, and identify potential areas for cost reduction.",
       "contributors": ["David Brown", "Lisa Wong", "Alex Patel"],
-      "video": "/videos/analytics-walkthrough.mp4"
+      "video": "/videos/analytics-walkthrough.mp4",
+      "source": "https://github.com/ignitetech/ai-analytics",
+      "view": "https://analytics.ignitetech.com",
+      "podcast": "https://podcasts.ignitetech.com/ai-analytics-intro"
     },
     {
       "type": "marketing",
@@ -58,7 +64,10 @@
       },
       "useCase": "EE can personalize email content, suggest optimal sending times, and predict open rates for different subject lines.",
       "contributors": ["Rachel Green", "Tom Wilson", "Sophia Lee"],
-      "video": "/videos/ee-tutorial.mp4"
+      "video": "/videos/ee-tutorial.mp4",
+      "source": "https://github.com/ignitetech/email-engine",
+      "view": "https://ee.ignitetech.com",
+      "podcast": "https://podcasts.ignitetech.com/email-engine-overview"
     },
     {
       "type": "product",
@@ -78,7 +87,10 @@
       },
       "useCase": "Teams can use MyPersonas to get quick answers to questions, simulate brainstorming sessions, or preserve institutional knowledge.",
       "contributors": ["James Smith", "Emma Davis", "Ryan Johnson"],
-      "video": "/videos/mypersonas-intro.mp4"
+      "video": "/videos/mypersonas-intro.mp4",
+      "source": "https://github.com/ignitetech/mypersonas",
+      "view": "https://mypersonas.ignitetech.com",
+      "podcast": "https://podcasts.ignitetech.com/mypersonas-demo"
     },
     {
       "type": "customerSuccess",
@@ -98,15 +110,15 @@
       },
       "useCase": "CSM AI can handle routine customer inquiries, route complex issues to the right team, and provide insights on customer sentiment.",
       "contributors": ["Anna Martinez", "Chris Taylor", "Olivia Brown"],
-      "video": "/videos/csm-ai-demo.mp4"
+      "video": "/videos/csm-ai-demo.mp4",
+      "source": "https://github.com/ignitetech/csm-ai",
+      "view": "https://csm.ignitetech.com",
+      "podcast": "https://podcasts.ignitetech.com/csm-ai-showcase"
     },
     {
       "type": "bizops",
       "id": 6,
       "title": "EE",
-      "source": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-      "view": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-      "podcast": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Harness the power of our new AI analytics suite.",
       "icon": "/icons/analytics-icon.png",
       "spearhead": "David Brown",
@@ -121,7 +133,10 @@
       },
       "useCase": "This tool can predict sales trends, optimize inventory management, and identify potential areas for cost reduction.",
       "contributors": ["David Brown", "Lisa Wong", "Alex Patel"],
-      "video": "/videos/video1.mp4"
+      "video": "/videos/video1.mp4",
+      "source": "https://github.com/ignitetech/ee-analytics",
+      "view": "https://ee-analytics.ignitetech.com",
+      "podcast": "https://podcasts.ignitetech.com/ee-analytics-deep-dive"
     }
   ],
   "departments": [

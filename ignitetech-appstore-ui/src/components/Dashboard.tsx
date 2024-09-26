@@ -86,32 +86,27 @@ const Dashboard: React.FC<DashboardProps> = ({ selectedDepartment, searchQuery, 
 
     return (
         <div className="p-6 space-y-6">
-            <div className="bg-blue-900 text-white p-6 rounded-lg">
-                <h6 className="text-sm text-slate-300	 uppercase mb-2">AI Innovation</h6>
-                <h2 className="text-2xl font-semibold mb-2">See what's new in IgniteTech</h2>
-                <p className="text-sm text-slate-300	">AI everywhere: processes, tools, and products</p>
+            <div className="bg-gradient-to-r from-[#24019a] to-[#00539F] text-white p-6 rounded-lg relative overflow-hidden">
+                <img src="/images/header-image.png" alt="Header background" className="absolute inset-0 w-full h-full object-cover mix-blend-overlay" />
+                <div className="relative z-10">
+                    <h6 className="text-sm text-slate-300 uppercase mb-2">AI Innovation</h6>
+                    <h2 className="text-l font-semibold my-2">See what's new in IgniteTech</h2>
+                    <p className="text-sm text-slate-300	">AI everywhere: processes, tools, and products</p>
+                </div>
             </div>
             
             {filteredProjects.length > 0 && (
                 <div className="grid grid-cols-2 gap-6">
-                    <div className="bg-white p-6 rounded-lg shadow">
+                    <div className="bg-gradient-to-br from-gray-100 to-gray-200 p-6 rounded-lg shadow">
                         <h3 className="text-sm font-medium text-gray-500 uppercase mb-2">Featured Project</h3>
-                        <ProjectCard
-                            title={filteredProjects[0].title}
-                            description={filteredProjects[0].description}
-                            icon={filteredProjects[0].icon}
-                            id={filteredProjects[0].id}
-                        />
+                        <h2 className="text-xl font-semibold text-gray-800 mb-2">{filteredProjects[0].title}</h2>
+                        <p className="text-sm text-gray-600">{filteredProjects[0].description}</p>
                     </div>
                     {filteredProjects.length > 1 && (
-                        <div className="bg-white p-6 rounded-lg shadow">
+                        <div className="bg-gradient-to-br from-gray-100 to-gray-200 p-6 rounded-lg shadow">
                             <h3 className="text-sm font-medium text-gray-500 uppercase mb-2">New Project</h3>
-                            <ProjectCard
-                                title={filteredProjects[1].title}
-                                description={filteredProjects[1].description}
-                                icon={filteredProjects[1].icon}
-                                id={filteredProjects[1].id}
-                            />
+                            <h2 className="text-xl font-semibold text-gray-800 mb-2">{filteredProjects[1].title}</h2>
+                            <p className="text-sm text-gray-600">{filteredProjects[1].description}</p>
                         </div>
                     )}
                 </div>
