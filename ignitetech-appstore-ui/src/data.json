@@ -1,0 +1,139 @@
+{
+  "projects": [
+    {
+      "type": "marketing",
+      "id": 1,
+      "title": "Fyx",
+      "description": "Streamline your content creation process with AI-powered tools.",
+      "icon": "/icons/fyx-icon.png",
+      "spearhead": "Sarah Johnson",
+      "team": "Content Innovation",
+      "competency": "Natural Language Processing",
+      "deployedOn": "2023-05-15",
+      "createdOn": "2022-11-01",
+      "techStack": "Python, TensorFlow, React",
+      "overview": "Fyx is an AI-powered content creation assistant that helps marketers generate high-quality content quickly and efficiently.",
+      "preview": {
+        "images": ["/images/fyx_01.png", "/images/fyx_02.png"]
+      },
+      "useCase": "Fyx can be used to draft blog posts, social media content, and email campaigns, saving marketers hours of work.",
+      "contributors": ["Sarah Johnson", "Mike Lee", "Emily Chen"],
+      "video": "/videos/fyx-demo.mp4",
+      "source": "https://github.com/ignitetech/fyx",
+      "view": "https://fyx.ignitetech.com",
+      "podcast": "https://podcasts.ignitetech.com/fyx-introduction"
+    },
+    {
+      "type": "bizops",
+      "id": 2,
+      "title": "AI-Driven Analytics",
+      "description": "Harness the power of our new AI analytics suite.",
+      "icon": "/icons/analytics-icon.png",
+      "spearhead": "David Brown",
+      "team": "Business Intelligence",
+      "competency": "Machine Learning",
+      "deployedOn": "2023-06-01",
+      "createdOn": "2022-12-15",
+      "techStack": "Python, Scikit-learn, Tableau",
+      "overview": "Our AI-Driven Analytics suite provides deep insights into business operations, helping companies make data-driven decisions.",
+      "preview": {
+        "images": ["/previews/analytics-dashboard.png", "/previews/analytics-report.png"]
+      },
+      "useCase": "This tool can predict sales trends, optimize inventory management, and identify potential areas for cost reduction.",
+      "contributors": ["David Brown", "Lisa Wong", "Alex Patel"],
+      "video": "/videos/analytics-walkthrough.mp4",
+      "source": "https://github.com/ignitetech/ai-analytics",
+      "view": "https://analytics.ignitetech.com",
+      "podcast": "https://podcasts.ignitetech.com/ai-analytics-intro"
+    },
+    {
+      "type": "marketing",
+      "id": 3,
+      "title": "EE - Email Engine",
+      "description": "AI for email campaigns",
+      "icon": "/icons/ee-icon.png",
+      "spearhead": "Rachel Green",
+      "team": "Digital Marketing",
+      "competency": "Natural Language Processing",
+      "deployedOn": "2023-04-01",
+      "createdOn": "2022-10-01",
+      "techStack": "Python, NLTK, React",
+      "overview": "EE is an AI-powered email marketing tool that optimizes email campaigns for better engagement and conversion rates.",
+      "preview": {
+        "images": ["/previews/ee-composer.png", "/previews/ee-analytics.png"]
+      },
+      "useCase": "EE can personalize email content, suggest optimal sending times, and predict open rates for different subject lines.",
+      "contributors": ["Rachel Green", "Tom Wilson", "Sophia Lee"],
+      "video": "/videos/ee-tutorial.mp4",
+      "source": "https://github.com/ignitetech/email-engine",
+      "view": "https://ee.ignitetech.com",
+      "podcast": "https://podcasts.ignitetech.com/email-engine-overview"
+    },
+    {
+      "type": "product",
+      "id": 4,
+      "title": "MyPersonas",
+      "description": "AI clones of the people in your team",
+      "icon": "/icons/mypersonas-icon.png",
+      "spearhead": "James Smith",
+      "team": "AI Innovation",
+      "competency": "Deep Learning",
+      "deployedOn": "2023-07-01",
+      "createdOn": "2023-01-15",
+      "techStack": "Python, PyTorch, React Native",
+      "overview": "MyPersonas creates AI-powered digital twins of team members, enhancing collaboration and knowledge sharing.",
+      "preview": {
+        "images": ["/previews/mypersonas-chat.png", "/previews/mypersonas-profile.png"]
+      },
+      "useCase": "Teams can use MyPersonas to get quick answers to questions, simulate brainstorming sessions, or preserve institutional knowledge.",
+      "contributors": ["James Smith", "Emma Davis", "Ryan Johnson"],
+      "video": "/videos/mypersonas-intro.mp4",
+      "source": "https://github.com/ignitetech/mypersonas",
+      "view": "https://mypersonas.ignitetech.com",
+      "podcast": "https://podcasts.ignitetech.com/mypersonas-demo"
+    },
+    {
+      "type": "customerSuccess",
+      "id": 5,
+      "title": "CSM AI",
+      "description": "AI for customer support",
+      "icon": "/icons/analytics-icon.png",
+      "spearhead": "Anna Martinez",
+      "team": "Customer Experience",
+      "competency": "Natural Language Processing",
+      "deployedOn": "2023-05-30",
+      "createdOn": "2022-11-15",
+      "techStack": "Python, TensorFlow, Vue.js",
+      "overview": "CSM AI is an intelligent customer support system that uses AI to improve response times and customer satisfaction.",
+      "preview": {
+        "images": ["/previews/csm-chatbot.png", "/previews/csm-dashboard.png"]
+      },
+      "useCase": "CSM AI can handle routine customer inquiries, route complex issues to the right team, and provide insights on customer sentiment.",
+      "contributors": ["Anna Martinez", "Chris Taylor", "Olivia Brown"],
+      "video": "/videos/csm-ai-demo.mp4",
+      "source": "https://github.com/ignitetech/csm-ai",
+      "view": "https://csm.ignitetech.com",
+      "podcast": "https://podcasts.ignitetech.com/csm-ai-showcase"
+    }
+  ],
+  "departments": [
+    {
+      "id": 1,
+      "name": "Marketing & Sales",
+      "description": "Content creation, email management and more.",
+      "projects": [1, 3, 4]
+    },
+    {
+      "id": 2,
+      "name": "BizOps",
+      "description": "Business operations and analytics.",
+      "projects": [2, 3]
+    },
+    {
+      "id": 3,
+      "name": "Customer Success",
+      "description": "Tools for customer support and engagement.",
+      "projects": [1, 4]
+    }
+  ]
+}
