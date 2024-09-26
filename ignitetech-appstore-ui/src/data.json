@@ -3,7 +3,7 @@
     {
       "type": "marketing",
       "id": 1,
-      "title": "Fyx - AI Content Creation Assistant",
+      "title": "Fyx",
       "description": "Streamline your content creation process with AI-powered tools.",
       "icon": "/icons/fyx-icon.png",
       "spearhead": "Sarah Johnson",
@@ -99,6 +99,29 @@
       "useCase": "CSM AI can handle routine customer inquiries, route complex issues to the right team, and provide insights on customer sentiment.",
       "contributors": ["Anna Martinez", "Chris Taylor", "Olivia Brown"],
       "video": "/videos/csm-ai-demo.mp4"
+    },
+    {
+      "type": "bizops",
+      "id": 6,
+      "title": "EE",
+      "source": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "view": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "podcast": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "description": "Harness the power of our new AI analytics suite.",
+      "icon": "/icons/analytics-icon.png",
+      "spearhead": "David Brown",
+      "team": "Business Intelligence",
+      "competency": "Machine Learning",
+      "deployedOn": "2023-06-01",
+      "createdOn": "2022-12-15",
+      "techStack": "Python, Scikit-learn, Tableau",
+      "overview": "Our AI-Driven Analytics suite provides deep insights into business operations, helping companies make data-driven decisions.",
+      "preview": {
+        "images": ["/images/fyx_01.png", "/images/fyx_02.png" ,"/images/analytics_01.png", "/images/analytics_02.png"]
+      },
+      "useCase": "This tool can predict sales trends, optimize inventory management, and identify potential areas for cost reduction.",
+      "contributors": ["David Brown", "Lisa Wong", "Alex Patel"],
+      "video": "/videos/video1.mp4"
     }
   ],
   "departments": [

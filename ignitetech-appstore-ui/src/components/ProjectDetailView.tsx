@@ -1,68 +1,47 @@
-import React, { useState } from 'react';
-import { ArrowLeft, ChevronLeft, ChevronRight } from 'lucide-react';
+import React from 'react';
+import { useParams, Link } from 'react-router-dom';
+import { ArrowLeft } from 'lucide-react';
 import { Button } from "@/components/ui/button";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import data from '../data.json';
 
-interface ProjectDetailViewProps {
-  project: {
-    title: string;
-    description: string;
-    icon: string;
-    spearhead: string;
-    team: string;
-    competency: string;
-    deployedOn: string;
-    createdOn: string;
-    techStack: string;
-    overview: string;
-    preview: {
-      images: string[];
-    };
-    useCase: string;
-    contributors: string[];
-    video: string;
-  };
-  onBack: () => void;
-}
 
-const ProjectDetailView: React.FC<ProjectDetailViewProps> = ({ project, onBack }) => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+const ProjectDetailView: React.FC = () => {
+  const { id } = useParams<{ id: string }>();
+  const project = data.projects.find(p => p.id === Number(id));
 
-  const nextImage = () => {
-    setCurrentImageIndex((prevIndex) => 
-      (prevIndex + 1) % project.preview.images.length
-    );
-  };
-
-  const prevImage = () => {
-    setCurrentImageIndex((prevIndex) => 
-      (prevIndex - 1 + project.preview.images.length) % project.preview.images.length
-    );
-  };
+  if (!project) {
+    return <div>Project not found</div>;
+  }
 
   return (
     <div className="bg-white min-h-screen">
-      <header className="bg-gray-100 p-4 flex items-center justify-between">
-        <div className="flex items-center">
-          <Button variant="ghost" onClick={onBack} className="mr-4">
-            <ArrowLeft size={20} />
-            <span className="ml-2">Back</span>
-          </Button>
+      <header className="p-6 bg-white mx-auto max-w-5xl">
+        <div className="mb-4">
+          <Link to="/">
+            <Button variant="ghost" className="px-0">
+              <ArrowLeft size={20} className="mr-2" />
+              <span>Back</span>
+            </Button>
+          </Link>
+        </div>
+        <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <img src={project.icon} alt={project.title} className="w-10 h-10 mr-3" />
+            <img src={project.icon} alt={project.title} className="w-12 h-12 mr-3" />
             <div>
               <h1 className="text-xl font-semibold">{project.title}</h1>
               <p className="text-sm text-gray-600">{project.description}</p>
             </div>
           </div>
-        </div>
-        <div>
-          <Button variant="outline" className="mr-2">Source</Button>
-          <Button>View</Button>
+          <div>
+            <Button variant="outline" className="mr-2 border-gray-500">Source</Button>
+            <Button variant="secondary" className="bg-gray-500 text-white hover:bg-gray-400">View</Button>
+          </div>
         </div>
       </header>
 
       <main className="p-6 max-w-5xl mx-auto">
-        <div className="grid grid-cols-3 gap-6 mb-6">
+        <div className="grid grid-cols-6 gap-6 mb-6 border-b border-t border-gray-200 py-4">
           <InfoItem label="SPEARHEAD" value={project.spearhead} />
           <InfoItem label="TEAM" value={project.team} />
           <InfoItem label="COMPETENCY" value={project.competency} />
@@ -72,15 +51,17 @@ const ProjectDetailView: React.FC<ProjectDetailViewProps> = ({ project, onBack }
         </div>
 
         <div className="grid grid-cols-4 gap-6 mb-8">
-          <section className="col-span-3">
+          <section className="col-span-3 border-gray-200 border-r">
             <h2 className="text-lg font-semibold mb-2">Overview</h2>
             <p className="text-gray-700">{project.overview}</p>
           </section>
           <section className="col-span-1">
-            <h2 className="text-lg font-semibold mb-2">Project Contributors</h2>
-            <div className="flex flex-col space-y-2">
+            <div>
+              <p className="text-xs font-medium text-gray-500">PROJECT CONTRIBUTORS</p>
+            </div>
+            <div className="flex flex-row flex-wrap gap-2 mt-2">
               {project.contributors.map((contributor, index) => (
-                <span key={index} className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-sm">
+                <span key={index} className="bg-gray-100 px-3 py-1 rounded text-sm">
                   {contributor}
                 </span>
               ))}
@@ -90,15 +71,19 @@ const ProjectDetailView: React.FC<ProjectDetailViewProps> = ({ project, onBack }
 
         <section className="mb-8">
           <h2 className="text-lg font-semibold mb-2">Preview</h2>
-          <div className="bg-gray-100 p-4 rounded-lg">
-            <div className="relative">
-              <img src={project.preview.images[currentImageIndex]} alt="Preview" className="w-full rounded-lg" />
-              <div className="absolute bottom-4 right-4 flex space-x-2">
-                <Button size="sm" variant="secondary" onClick={prevImage}><ChevronLeft size={16} /></Button>
-                <Button size="sm" variant="secondary" onClick={nextImage}><ChevronRight size={16} /></Button>
-              </div>
-            </div>
-          </div>
+          <Carousel className="w-full max-w-4xl mx-auto">
+            <CarouselContent>
+              {project.preview.images.map((image, index) => (
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-1">
+                    <img src={image} alt={`Preview ${index + 1}`} className="w-full h-64 object-cover rounded-lg" />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </section>
 
         <section className="mb-8">
@@ -124,7 +109,7 @@ const ProjectDetailView: React.FC<ProjectDetailViewProps> = ({ project, onBack }
 
 const InfoItem: React.FC<{ label: string; value: string }> = ({ label, value }) => (
   <div>
-    <p className="text-sm font-medium text-gray-500">{label}</p>
+    <p className="text-xs font-medium text-gray-500">{label}</p>
     <p className="mt-1 text-sm text-gray-900">{value}</p>
   </div>
 );

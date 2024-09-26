@@ -4,20 +4,27 @@ interface ProjectCardProps {
   title: string;
   description: string;
   icon: string;
-  onView: () => void;
+  id: number;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, icon, onView }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, icon, id }) => {
   return (
-    <div className="bg-white rounded-lg shadow-sm p-4 hover:shadow-md transition-shadow duration-200">
-      <div className="flex items-center mb-2">
-        <img src={icon} alt={title} className="w-8 h-8 mr-2" />
-        <h3 className="text-lg font-semibold text-gray-800">{title}</h3>
+    <div className="bg-white rounded-lg p-4 ">
+      <div className="flex items-center justify-between">
+        <div className="flex items-center">
+          <img src={icon} alt={title} className="w-8 h-8 mr-2" />
+          <div>
+            <h6 className="font-semibold text-gray-600">{title}</h6>
+            <p className="text-sm text-gray-600">{description}</p>
+          </div>
+        </div>
+        <a 
+          href={`/project/${id}`}
+          className="px-3 py-1 text-sm text-gray-600 border border-gray-400 rounded-md hover:bg-gray-50 transition-colors duration-200"
+        >
+          View
+        </a>
       </div>
-      <p className="text-sm text-gray-600 mb-4">{description}</p>
-      <button onClick={onView} className="px-3 py-1 text-sm text-blue-600 border border-blue-600 rounded-md hover:bg-blue-50 transition-colors duration-200">
-        View
-      </button>
     </div>
   );
 };
