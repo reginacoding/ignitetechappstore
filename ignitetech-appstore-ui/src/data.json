@@ -97,7 +97,7 @@
       "id": 5,
       "title": "CSM AI",
       "description": "AI for customer support",
-      "icon": "/icons/csm-icon.png",
+      "icon": "/icons/analytics-icon.png",
       "spearhead": "Anna Martinez",
       "team": "Customer Experience",
       "competency": "Natural Language Processing",
@@ -114,29 +114,6 @@
       "source": "https://github.com/ignitetech/csm-ai",
       "view": "https://csm.ignitetech.com",
       "podcast": "https://podcasts.ignitetech.com/csm-ai-showcase"
-    },
-    {
-      "type": "bizops",
-      "id": 6,
-      "title": "EE",
-      "description": "Harness the power of our new AI analytics suite.",
-      "icon": "/icons/analytics-icon.png",
-      "spearhead": "David Brown",
-      "team": "Business Intelligence",
-      "competency": "Machine Learning",
-      "deployedOn": "2023-06-01",
-      "createdOn": "2022-12-15",
-      "techStack": "Python, Scikit-learn, Tableau",
-      "overview": "Our AI-Driven Analytics suite provides deep insights into business operations, helping companies make data-driven decisions.",
-      "preview": {
-        "images": ["/images/fyx_01.png", "/images/fyx_02.png" ,"/images/analytics_01.png", "/images/analytics_02.png"]
-      },
-      "useCase": "This tool can predict sales trends, optimize inventory management, and identify potential areas for cost reduction.",
-      "contributors": ["David Brown", "Lisa Wong", "Alex Patel"],
-      "video": "/videos/video1.mp4",
-      "source": "https://github.com/ignitetech/ee-analytics",
-      "view": "https://ee-analytics.ignitetech.com",
-      "podcast": "https://podcasts.ignitetech.com/ee-analytics-deep-dive"
     }
   ],
   "departments": [
